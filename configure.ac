@@ -32,7 +32,7 @@ m4_define([thunar_version_major], [1])
 m4_define([thunar_version_minor], [6])
 m4_define([thunar_version_micro], [3])
 m4_define([thunar_version_nano], [])
-m4_define([thunar_version_build], [defa44c])
+m4_define([thunar_version_build], [5bf7c9c])
 m4_define([thunar_version_tag], [git])
 m4_define([thunar_version], [thunar_version_major().thunar_version_minor().thunar_version_micro()ifelse(thunar_version_nano(), [], [], [.thunar_version_nano()])ifelse(thunar_version_tag(), [git], [thunar_version_tag()-thunar_version_build()], [thunar_version_tag()])])
 

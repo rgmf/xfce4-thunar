@@ -65,10 +65,6 @@
 #include <glib.h>
 
 
-
-#include <stdio.h>
-
-
 /* Property identifiers */
 enum
 {
@@ -1942,6 +1938,7 @@ thunar_window_notebook_insert (ThunarWindow *window,
   /* connect signal view */
   gtk_widget_add_events (GTK_WIDGET (view), GDK_BUTTON_PRESS_MASK);
   g_signal_connect (G_OBJECT (GTK_BIN (view)->child), "button-press-event", G_CALLBACK (thunar_window_notebook_select), window);
+  g_signal_connect (G_OBJECT (GTK_BIN (view)->child), "button-release-event", G_CALLBACK (thunar_window_notebook_select), window);
 
   /* take focus on the view */
   gtk_widget_grab_focus (view);
